@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSCode Theme Park</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="/images/test.png" alt="header-banner" class="header-image">
+    </div>
+
+    <main class="main">
+        <div class="themes-grid">
+            <% themes.forEach(theme => { %>
+                <div class="theme-card">
+                    <a href="https://vscode.dev/editor/theme/<%= theme.unique_id %>" target="_blank">
+                        <img src="<%= theme.image %>" alt="<%= theme.name %>" class="theme-image">
+                        <h3><%= theme.name %></h3>
+                        <p><%= theme.description %></p>
+                    </a>
+                </div>
+            <% }); %>
+        </div>
+    </main>
+
+    <footer>
+        <!-- 푸터 콘텐츠 -->
+    </footer>
+</body>
+</html>
